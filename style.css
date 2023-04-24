@@ -1,0 +1,157 @@
+
+body {
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #2b5357;
+    padding: 8px 12px;
+}
+
+.heading_aboutMe { 
+
+    font-size: 24px;;
+    display: flex;
+    background-color: #2b5357;
+    padding: 23px 23px;
+    align-items: center;
+    color: white;
+
+}
+
+.heading_project { 
+
+    font-size: 24px;;
+    display: flex;
+    background-color: #2b5357;
+    padding: 23px 23px;
+    align-items: center;
+    color: white;
+
+}
+
+.mainParagraph {
+
+    padding: 8px 12px;
+}
+
+.github_links {
+    padding: 8px 20px;
+
+    
+}
+
+.github_links a{
+    color: black;
+}
+.navbar__logo{
+
+    font-size: 24px;
+ 
+}
+
+.navbar__logo i {
+    color: #bfd52f
+}
+
+.navbar__menuItems {
+
+    display: flex;
+    list-style: none ;
+    padding-left: 0;
+ 
+}
+
+.navbar__menuItems li {
+
+    padding: 8px 8px;
+    border-radius: 6px;
+}
+
+.navbar__menuItems li:hover {
+
+    background-color: #bfd52f;
+}
+.navbar__icons {
+
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 25px;
+}
+
+.navbar__icons li {
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.navbar__icons li:hover {
+    background-color: #bfd52f;
+}
+
+.navbar__toggleBtn {
+
+    position: absolute;
+    right: 25px;
+    font-size: 24px;
+    color: #bfd52f;
+    display: none;
+}
+
+.navbar__homeBtn {
+
+    position: absolute;
+    right: 25px;
+    font-size: 24px;
+    color: #bfd52f;
+   
+}
+/*When width of website is lower than 600x, then change
+display*/
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        flex-direction:column;
+        align-items: flex-start;
+    }
+    
+    .navbar__menuItems {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 8px 24px;
+    }
+
+    .navbar__menuItems li {
+
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar__toggleBtn {
+
+        display: block;
+    }
+    
+    .navbar__menuItems.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+}
